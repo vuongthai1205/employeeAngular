@@ -1,0 +1,70 @@
+<router-outlet></router-outlet>
+<div class="container-xl">
+  <div class="table-responsive">
+    <div class="table-wrapper">
+      <div class="table-title mb-2">
+        <div class="row">
+          <div class="col-sm-6">
+            <h4><b>Manage Employees</b></h4>
+          </div>
+          <div class="col-sm-6 d-flex">
+            <button
+              class="btn btn-success"
+              (click)="AddEmployee()"
+              style="margin-left: auto"
+            >
+              <i class="fas fa-plus-circle"></i><span> ADD</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <table
+        class="table table-striped table-hover table-bordered table-content"
+      >
+        <thead>
+          <tr class="center-align">
+            <th>Staff Code</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employeeList" class="center-align">
+            <td>{{ employee.staffCode }}</td>
+            <td>{{ employee.firstName }}</td>
+            <td>{{ employee.lastName }}</td>
+            <td>{{ employee.phone }}</td>
+            <td>
+              <a
+                href="#"
+                [routerLink]="['/ViewEmployee/', employee.staffCode]"
+                class="btn"
+                ><i class="fas fa-eye view"></i
+              ></a>
+              <a
+                href="#"
+                [routerLink]="['/EditEmployee/', employee.staffCode]"
+                class="btn"
+                ><i class="fa fa-edit edit"></i
+              ></a>
+              <button
+                mat-button
+                (click)="openDialog(employee.staffCode)"
+                class="btn"
+              >
+                <i class="fas fa-trash-alt delete"></i>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td *ngIf="employeeList.length == 0" colspan="6">
+              No Employee Found
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
