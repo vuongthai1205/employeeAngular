@@ -1,0 +1,72 @@
+{
+  "HOME": {
+    "LIST-COMPANY": "企業リスト",
+    "LIST-EMPLOYEES": "従業員リスト"
+  },
+  "list-employee": {
+    "manager": "従業員マネージャ",
+    "add": "追加",
+    "Id": "従業員ID",
+    "firstName": "名",
+    "lastName": "姓",
+    "phone": "電話番号",
+    "actions": "アクション",
+    "no-employee": "従業員が見つかりません"
+  },
+  "add-employee": {
+    "enter-firstName": "名前を入力",
+    "enter-lastName": "姓を入力",
+    "enter-phone": "電話番号を入力",
+    "text": "従業員を追加",
+    "submit": "送信"
+  },
+  "edit-employee": {
+    "text": "従業員情報を編集する"
+  },
+  "company": "企業",
+  "add-company-to-employee": {
+    "chosse": "企業を選択",
+    "change": "企業を変更"
+  },
+  "Id": "ID",
+  "update-at": "更新日時",
+  "create-at": "作成日時",
+  "back": "戻る",
+  "view-employee": {
+    "text": "従業員情報を表示"
+  },
+  "cancel": "キャンセル",
+  "delete": "削除",
+  "delete-employee": {
+    "text": "従業員を削除"
+  },
+  "success": "成功",
+  "notification": "通知",
+  "employee-with-id": "IDを持つ従業員",
+  "not-found": "見つかりません。",
+  "error": "エラー",
+  "to": "に",
+  "list-company": {
+    "manager": "企業マネージャ",
+    "add": "追加",
+    "name": "名前",
+    "address": "住所",
+    "action": "アクション",
+    "no-company": "企業が見つかりません"
+  },
+  "company-with-id": "IDを持つ企業",
+  "delete-company": {
+    "text": "企業を削除"
+  },
+  "add-company": {
+    "text": "企業を追加",
+    "enter-name": "名前を入力",
+    "enter-address": "住所を入力",
+    "submit": "送信"
+  },
+  "view-company": "企業情報を表示",
+  "edit-company": "企業情報を編集",
+  "add-employees-to-company": "企業に従業員を追加",
+  "employees": "従業員",
+  "add-employees": "従業員を追加"
+}

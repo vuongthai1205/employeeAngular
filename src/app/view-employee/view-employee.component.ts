@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { RestApiService } from '../shared/rest-api.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-view-employee',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './view-employee.component.html',
   styleUrl: './view-employee.component.scss',
 })

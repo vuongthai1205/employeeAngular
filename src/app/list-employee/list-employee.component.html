@@ -5,7 +5,7 @@
       <div class="table-title mb-2">
         <div class="row">
           <div class="col-sm-6">
-            <h4><b>Manage Employees</b></h4>
+            <h4><b>{{'list-employee.manager' | translate}}</b></h4>
           </div>
           <div class="col-sm-6 d-flex">
             <button
@@ -13,7 +13,7 @@
               (click)="AddEmployee()"
               style="margin-left: auto"
             >
-              <i class="fas fa-plus-circle"></i><span> ADD</span>
+              <i class="fas fa-plus-circle"></i><span> {{'list-employee.add' | translate}}</span>
             </button>
           </div>
         </div>
@@ -23,11 +23,11 @@
       >
         <thead>
           <tr class="center-align">
-            <th>Staff Code</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Phone</th>
-            <th>Actions</th>
+            <th>{{'list-employee.Id' | translate}}</th>
+            <th>{{'list-employee.firstName' | translate}}</th>
+            <th>{{'list-employee.lastName' | translate}}</th>
+            <th>{{'list-employee.phone' | translate}}</th>
+            <th>{{'list-employee.actions' | translate}}</th>
           </tr>
         </thead>
         <tbody>
@@ -60,11 +60,25 @@
           </tr>
           <tr>
             <td *ngIf="employeeList.length == 0" colspan="6">
-              No Employee Found
+              {{'list-employee.no-employee' | translate}}
             </td>
           </tr>
         </tbody>
       </table>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          @for (item of [].constructor(countEmployee); track $index) {
+            <li class="page-item">
+              <a class="page-link" [routerLink]="['.']" [queryParams]="{ page: $index + 1 }" href="#">
+                {{ $index+ 1}}
+              </a>
+            </li>
+          }
+          
+          
+          
+        </ul>
+      </nav>
     </div>
   </div>
 </div>

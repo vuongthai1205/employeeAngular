@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <b class="mb-2 font-weight-bold">{{'edit-company' | translate }}</b>
+      <form [formGroup]="companyForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="name">{{'list-company.name' | translate}}:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="{{'add-company.enter-name' | translate}}"
+            formControlName="name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="address">{{'list-company.address' | translate}}:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="address"
+            placeholder="{{'add-company.enter-address' | translate}}"
+            formControlName="address"
+            [matAutocomplete]="auto"
+          />
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option
+              *ngFor="let addr of addresses"
+              [value]="addr.properties.address_line1"
+            >
+              {{ addr.properties.address_line1 }}
+            </mat-option>
+          </mat-autocomplete>
+        </div>
+        
+        <button type="submit" class="btn btn-primary mt-2">{{'add-company.submit' | translate}}</button>
+      </form>
+      @defer (when isCheckCompany()) {
+
+        <app-add-employee-to-company
+          [companyId]="companyId"
+        ></app-add-employee-to-company>
+        }
+    </div>
+  </div>
+</div>

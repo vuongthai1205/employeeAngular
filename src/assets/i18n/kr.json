@@ -1,0 +1,72 @@
+{
+  "HOME": {
+    "LIST-COMPANY": "회사 목록",
+    "LIST-EMPLOYEES": "직원 목록"
+  },
+  "list-employee": {
+    "manager": "직원 관리자",
+    "add": "추가",
+    "Id": "직원 ID",
+    "firstName": "이름",
+    "lastName": "성",
+    "phone": "전화번호",
+    "actions": "동작",
+    "no-employee": "직원을 찾을 수 없습니다"
+  },
+  "add-employee": {
+    "enter-firstName": "이름 입력",
+    "enter-lastName": "성 입력",
+    "enter-phone": "전화번호 입력",
+    "text": "직원 추가",
+    "submit": "제출"
+  },
+  "edit-employee": {
+    "text": "직원 정보 편집"
+  },
+  "company": "회사",
+  "add-company-to-employee": {
+    "chosse": "회사 선택",
+    "change": "회사 변경"
+  },
+  "Id": "ID",
+  "update-at": "업데이트 시간",
+  "create-at": "생성 시간",
+  "back": "뒤로",
+  "view-employee": {
+    "text": "직원 정보 보기"
+  },
+  "cancel": "취소",
+  "delete": "삭제",
+  "delete-employee": {
+    "text": "직원 삭제"
+  },
+  "success": "성공",
+  "notification": "알림",
+  "employee-with-id": "ID를 가진 직원",
+  "not-found": "찾을 수 없음.",
+  "error": "오류",
+  "to": "에서",
+  "list-company": {
+    "manager": "회사 관리자",
+    "add": "추가",
+    "name": "이름",
+    "address": "주소",
+    "action": "동작",
+    "no-company": "회사를 찾을 수 없습니다"
+  },
+  "company-with-id": "ID를 가진 회사",
+  "delete-company": {
+    "text": "회사 삭제"
+  },
+  "add-company": {
+    "text": "회사 추가",
+    "enter-name": "이름 입력",
+    "enter-address": "주소 입력",
+    "submit": "제출"
+  },
+  "view-company": "회사 정보 보기",
+  "edit-company": "회사 정보 편집",
+  "add-employees-to-company": "회사에 직원 추가",
+  "employees": "직원",
+  "add-employees": "직원 추가"
+}

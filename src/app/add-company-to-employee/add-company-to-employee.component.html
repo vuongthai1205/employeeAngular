@@ -1,0 +1,12 @@
+<h4 class="mt-2">{{'company' | translate}}</h4>
+<mat-form-field>
+  <mat-label>{{'add-company-to-employee.chosse' | translate}}</mat-label>
+  <mat-select [(value)]="companyId">
+    @for (company of companyList; track company.id) {
+      <mat-option [value]="company.id">{{company.name}}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>
+<br>
+<button mat-raised-button color="accent" type="button" (click)="changeCompany()">{{'add-company-to-employee.change' | translate}}</button>
+<br>

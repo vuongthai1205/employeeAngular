@@ -17,10 +17,16 @@ export class RestApiService {
     }),
   };
 
-  getEmployees(): Observable<Employee> {
-    return this.http
-      .get<Employee>(this.apiURL + '/api/Employee')
-      .pipe(retry(1), catchError(this.handleError));
+  getEmployees(page: any): Observable<Employee> {
+    if (page != null) {
+      return this.http
+        .get<Employee>(`${this.apiURL}/api/Employee?page=${page}`)
+        .pipe(retry(1), catchError(this.handleError));
+    } else {
+      return this.http
+        .get<Employee>(`${this.apiURL}/api/Employee?page=1`)
+        .pipe(retry(1), catchError(this.handleError));
+    }
   }
 
   // HttpClient API get() method => Fetch employee
@@ -38,6 +44,21 @@ export class RestApiService {
         this.httpOptions
       )
       .pipe(retry(1), catchError(this.handleError));
+  }
+
+  addCompanyToEmployee(id: any, idC: any): Observable<any> {
+    return this.http.post(
+      this.apiURL + '/api/Employee/' + id + '/add-company/' + idC,
+      this.httpOptions
+    );
+  }
+
+  addEmployeesToCompany(id: any, employees: any): Observable<any> {
+    return this.http.post(
+      this.apiURL + '/api/Company/' + id + '/add-employees/',
+      employees,
+      this.httpOptions
+    );
   }
 
   editEmployee(id: any, employee: any): Observable<Employee> {
@@ -79,7 +100,7 @@ export class RestApiService {
       .pipe(retry(1), catchError(this.handleError));
   }
 
-  editComany(id: any, company: any): Observable<Company> {
+  editCompany(id: any, company: any): Observable<Company> {
     return this.http
       .put<Company>(
         this.apiURL + '/api/Company/' + id,
@@ -94,6 +115,19 @@ export class RestApiService {
       .delete(this.apiURL + '/api/Company/' + id, this.httpOptions)
       .pipe(retry(1), catchError(this.handleError));
   }
+
+  getAutoPlace(place: string): any {
+    return this.http
+      .get(
+        `https://api.geoapify.com/v1/geocode/autocomplete?text=${place}&filter=countrycode:vn&apiKey=5ee96c9504d34514bd9fe5625d86fa7f`,
+        this.httpOptions
+      )
+      .pipe(retry(1), catchError(this.handleError));
+  }
+
+  getCountEmployee = () => {
+    return this.http.get(`${this.apiURL}/api/Employee/count`, this.httpOptions).pipe(retry(1), catchError(this.handleError));
+  };
 
   handleError(error: any) {
     let errorMessage = '';

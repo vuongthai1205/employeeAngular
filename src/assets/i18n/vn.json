@@ -1,0 +1,72 @@
+{
+  "HOME": {
+    "LIST-COMPANY": "Danh sách công ty",
+    "LIST-EMPLOYEES": "Danh sách nhân viên"
+  },
+  "list-employee": {
+    "manager": "Quản lý nhân viên",
+    "add": "Thêm",
+    "Id": "Mã Nhân Viên",
+    "firstName": "Tên",
+    "lastName": "Họ",
+    "phone": "Số điện thoại",
+    "actions": "Hành động",
+    "no-employee": "Không tìm thấy nhân viên"
+  },
+  "add-employee": {
+    "enter-firstName": "Nhập Tên",
+    "enter-lastName": "Nhập Họ",
+    "enter-phone": "Nhập Số Điện Thoại",
+    "text": "Thêm nhân viên",
+    "submit": "Gửi"
+  },
+  "edit-employee": {
+    "text": "Chỉnh sửa thông tin nhân viên "
+  },
+  "company": "Công ty",
+  "add-company-to-employee": {
+    "chosse": "Chọn Công Ty",
+    "change": "Thay đổi công ty"
+  },
+  "Id": "ID",
+  "update-at": "Cập nhật lúc",
+  "create-at": "Tạo lúc",
+  "back": "Quay lại",
+  "view-employee": {
+    "text": "Xem thông tin nhân viên"
+  },
+  "cancel": "Hủy",
+  "delete": "Xóa",
+  "delete-employee": {
+    "text": "Xóa Nhân Viên"
+  },
+  "success": "Thành công",
+  "notification": "Thông báo",
+  "employee-with-id": "Nhân viên có ID",
+  "not-found": "không tìm thấy.",
+  "error": "Lỗi",
+  "to": "đến",
+  "list-company": {
+    "manager": "Quản lý Công Ty",
+    "add": "THÊM",
+    "name": "Tên",
+    "address": "Địa chỉ",
+    "action": "Hành động",
+    "no-company": "Không tìm thấy Công Ty"
+  },
+  "company-with-id": "Công Ty có ID",
+  "delete-company": {
+    "text": "Xóa Công Ty"
+  },
+  "add-company": {
+    "text": "Thêm công ty",
+    "enter-name": "Nhập Tên",
+    "enter-address": "Nhập Địa Chỉ",
+    "submit": "Gửi"
+  },
+  "view-company": "Xem thông tin Công Ty",
+  "edit-company": "Chỉnh sửa thông tin Công Ty",
+  "add-employees-to-company": "Thêm Nhân Viên vào Công Ty",
+  "employees": "Nhân viên",
+  "add-employees": "Thêm nhân viên"
+}

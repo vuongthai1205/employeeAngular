@@ -1,0 +1,12 @@
+<p class="mt-2"><b>{{'add-employees-to-company' | translate}}</b></p>
+<mat-form-field>
+  <mat-label>{{'employees' | translate}}</mat-label>
+  <mat-select [formControl]="employees" multiple>
+    @for (employee of employeeList; track employee.staffCode) {
+      <mat-option [value]="employee.staffCode">{{employee.staffCode}} / {{employee.fullName}}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>
+<br>
+<button mat-raised-button color="accent" type="button" (click)="addEmployees()">{{'add-employees' | translate}}</button>
+<br>

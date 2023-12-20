@@ -8,10 +8,11 @@
             <li class="nav-item active">
               <a
               class="nav-link"
-                routerLink="/list-employee"
+                [routerLink]="['list-employee']"
+                [queryParams]="{page: 1}"
                 routerLinkActive="active"
                 ariaCurrentWhenActive="page"
-                >List Employee</a
+                >{{ 'HOME.LIST-EMPLOYEES' | translate }}</a
               >
             </li>
             <li class="nav-item active">
@@ -20,8 +21,13 @@
                 routerLink="/list-company"
                 routerLinkActive="active"
                 ariaCurrentWhenActive="page"
-                >List Company</a
+                >{{ 'HOME.LIST-COMPANY' | translate }}</a
               >
+            </li>
+            <li class="nav-item active">
+              <select #langSelect (change)="languageChange(langSelect)">
+                <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.defaultLang">{{ lang }}</option>
+              </select>
             </li>
           </ul>
         </div>

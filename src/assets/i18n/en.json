@@ -1,0 +1,73 @@
+{
+  "HOME": {
+    "LIST-COMPANY": "List company",
+    "LIST-EMPLOYEES": "List employee"
+  },
+  "list-employee": {
+    "manager": "Manager Employees",
+    "text" : "List Employee",
+    "add": "ADD",
+    "Id": "Staff Code",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "phone": "Phone",
+    "actions": "Actions",
+    "no-employee" : "No Employee Found"
+  },
+  "add-employee" : {
+    "enter-firstName": "Enter First Name",
+    "enter-lastName": "Enter Last Name",
+    "enter-phone": "Enter Phone",
+    "text": "Add employee",
+    "submit": "Submit"
+  },
+  "edit-employee": {
+    "text": "Edit Employee "
+  },
+  "company": "Company",
+  "add-company-to-employee": {
+    "chosse": "Chosse Company",
+    "change": "Change company"
+  },
+  "Id" : "Id",
+  "update-at" : "Update at",
+  "create-at": "Create at",
+  "back" : "Back",
+  "view-employee": {
+    "text" : "View Employee"
+  },
+  "cancel" : "Cancel",
+  "delete": "Delete",
+  "delete-employee": {
+    "text": "Delete Employee"
+  },
+  "success": "success",
+  "notification" : "Notification",
+  "employee-with-id" : "Employee with ID",
+  "not-found": "not found.",
+  "error" : "Error",
+  "to": "to",
+  "list-company": {
+    "manager" : "Manager Companies",
+    "add": "ADD",
+    "name": "Name",
+    "address": "Address",
+    "action" : "Action",
+    "no-company": "No Company Found"
+  },
+  "company-with-id" : "Company with ID",
+  "delete-company" : {
+    "text": "Delete Company"
+  },
+  "add-company": {
+    "text": "Add company",
+    "enter-name": "Enter Name",
+    "enter-address" : "Enter Address",
+    "submit" : "Submit"
+  },
+  "view-company" : "View Company",
+  "edit-company" : "Edit Company",
+  "add-employees-to-company" : "Add Employees to Company",
+  "employees": "Employees",
+  "add-employees": "Add employees"
+}

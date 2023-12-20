@@ -4,3 +4,7 @@
 @import 'bootstrap/scss/bootstrap';
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.navbar-expand-lg .navbar-nav .nav-link:first-child{
+  padding-left: 0;
+}

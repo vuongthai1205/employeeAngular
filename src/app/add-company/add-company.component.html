@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <form [formGroup]="companyForm" (ngSubmit)="onSubmit()">
+        
+        <div class="form-group">
+          <label for="Name">{{'list-company.name' | translate}}: </label>
+          <input
+            type="text"
+            class="form-control"
+            id="Name"
+            placeholder="{{'add-company.enter-name' | translate}}"
+            formControlName="name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="address">{{'list-company.address' | translate}}:</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="address"
+            placeholder="{{'add-company.enter-address' | translate}}"
+            formControlName="address"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">{{'add-company.submit' | translate}}</button>
+      </form>
+    </div>
+  </div>
+</div>

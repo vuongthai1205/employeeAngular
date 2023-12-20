@@ -4,10 +4,10 @@
       <div class="table-title">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h4><b>View Employee</b></h4>
+            <h4><b>{{'view-employee.text' | translate}}</b></h4>
           </div>
           <div class="col-sm-6 d-flex">
-            <button (click)="goHome()" class="btn btn-success back" style="margin-left: auto;"><i class='fas fa-arrow-circle-left'></i> &nbsp;Back</button>
+            <button (click)="goHome()" class="btn btn-success back" style="margin-left: auto;"><i class='fas fa-arrow-circle-left'></i> &nbsp;{{'back' | translate}}</button>
           </div>
         </div>
       </div>       
@@ -15,7 +15,7 @@
         <tbody>
           <tr>
             <td>
-              <label><b>Id</b></label>
+              <label><b>{{'Id' | translate}}</b></label>
             </td>
             <td>
               <span>{{ employeeDetail.staffCode }}</span>              
@@ -23,7 +23,7 @@
           </tr>
           <tr>
             <td>
-              <label><b>First Name</b></label>
+              <label><b>{{'list-employee.firstName' | translate}}</b></label>
             </td>
             <td>
               <span>{{ employeeDetail.firstName }}</span>              
@@ -31,7 +31,7 @@
           </tr>
           <tr>
             <td>
-              <label><b>Last Name</b></label>
+              <label><b>{{'list-employee.lastName' | translate}}</b></label>
             </td>
             <td>
               <span>{{ employeeDetail.lastName }}</span>              
@@ -39,7 +39,7 @@
           </tr>
           <tr>
             <td>
-              <label><b>Phone</b></label>
+              <label><b>{{'list-employee.phone' | translate}}</b></label>
             </td>
             <td>
               <span>{{ employeeDetail.phone }}</span>              
@@ -47,7 +47,7 @@
           </tr>
           <tr>
             <td>
-              <label><b>Company</b></label>
+              <label><b>{{'company' | translate}}</b></label>
             </td>
             <td>
               <span>{{ employeeDetail?.company?.name }}</span>              
@@ -55,7 +55,7 @@
           </tr>
           <tr>
             <td>
-              <label><b>Create at</b></label>
+              <label><b>{{'create-at' | translate}}</b></label>
             </td>
             <td>
               <span>{{ employeeDetail.createAt }}</span>              
@@ -63,7 +63,7 @@
           </tr>
           <tr>
             <td>
-              <label><b>Update at</b></label>
+              <label><b>{{'update-at' | translate}}</b></label>
             </td>
             <td>
               <span>{{ employeeDetail.updateAt }}</span>              
