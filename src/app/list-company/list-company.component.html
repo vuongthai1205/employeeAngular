@@ -1,70 +1,127 @@
-<div class="container-xl">
-  <div class="table-responsive">
+<div class="container-fluid">
+  <div class="">
     <div class="table-wrapper">
       <div class="table-title mb-2">
         <div class="row">
           <div class="col-sm-6">
-            <h4><b>{{'list-company.manager' | translate}}</b></h4>
+            <h4>
+              <b>{{ "list-company.manager" | translate }}</b>
+            </h4>
           </div>
           <div class="col-sm-6 d-flex">
             <button
+              mat-raised-button
+              color="primary"
               class="btn btn-success"
               style="margin-left: auto"
               (click)="addCompany()"
+              matTooltip="Add company"
             >
-              <i class="fas fa-plus-circle"></i><span> {{'list-company.add' | translate}} </span>
+              <i class="fas fa-plus-circle"></i
+              ><span> {{ "list-company.add" | translate }} </span>
             </button>
           </div>
         </div>
       </div>
-      <table
-        class="table table-striped table-hover table-bordered table-content"
-      >
-        <thead>
-          <tr class="center-align">
-            <th>{{'Id' | translate}}</th>
-            <th>{{'list-company.name' | translate}}</th>
-            <th>{{'list-company.address' | translate}}</th>
-            <th>{{'list-company.action' | translate}}</th>
-          </tr>
-        </thead>
-        <tbody>
-          @for (company of companyList; track $index) {
-            <tr class="center-align">
-              <td>{{ company.id }}</td>
-              <td>{{ company.name }}</td>
-              <td>{{ company.address }}</td>
-              <td>
-                <a
-                  href="#"
-                  [routerLink]="['/ViewCompany/', company.id]"
-                  class="btn"
-                  ><i class="fas fa-eye view"></i
-                ></a>
-                <a
-                  href="#"
-                  [routerLink]="['/EditCompany/',company.id]"
-                  class="btn"
-                  ><i class="fa fa-edit edit"></i
-                ></a>
-                <button
-                  mat-button
-                  (click)="openDialog(company.id)"
-                  class="btn"
-                >
-                  <i class="fas fa-trash-alt delete"></i>
-                </button>
-              </td>
-            </tr>
-          }
-          <tr>
-            <td *ngIf="companyList.length == 0" colspan="6">
-              {{'list-company.no-company' | translate}}
+
+      <div class="mat-elevation-z8 example-container mt-2">
+        <table
+          mat-table
+          [dataSource]="dataSource"
+          matSort
+          (matSortChange)="announceSortChange($event)"
+        >
+          <caption class="caption-table">
+            {{
+              "caption-table-company" | translate
+            }}
+          </caption>
+          <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+          <!-- Position Column -->
+          <ng-container matColumnDef="Id">
+            <th
+              mat-header-cell
+              *matHeaderCellDef
+              mat-sort-header
+              sortActionDescription="Sort by id"
+            >
+              {{ "list-employee.Id" | translate }}
+            </th>
+            <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="Name">
+            <th
+              mat-header-cell
+              *matHeaderCellDef
+              mat-sort-header
+              sortActionDescription="Sort by name"
+            >
+              {{ "list-company.name" | translate }}
+            </th>
+            <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+          </ng-container>
+
+          <!-- Weight Column -->
+          <ng-container matColumnDef="Address">
+            <th
+              mat-header-cell
+              *matHeaderCellDef
+              mat-sort-header
+              sortActionDescription="Sort by address"
+            >
+              {{ "list-company.address" | translate }}
+            </th>
+            <td mat-cell *matCellDef="let element">{{ element.address }}</td>
+          </ng-container>
+          <ng-container matColumnDef="Actions">
+            <th mat-header-cell *matHeaderCellDef>
+              {{ "list-company.action" | translate }}
+            </th>
+            <td mat-cell *matCellDef="let element">
+              <a
+                matTooltip="View detail company"
+                mat-button
+                href="#"
+                [routerLink]="['/ViewCompany/', element.id]"
+                class="btn"
+                ><i class="fas fa-eye view"></i
+              ></a>
+              <a
+                matTooltip="Edit company"
+                mat-button
+                href="#"
+                [routerLink]="['/EditCompany/', element.id]"
+                class="btn"
+                ><i class="fa fa-edit edit"></i
+              ></a>
+              <button
+                matTooltip="Delete company"
+                mat-button
+                (click)="openDialogDelete(element.id)"
+                class="btn"
+              >
+                <i class="fas fa-trash-alt delete"></i>
+              </button>
             </td>
-          </tr>
-        </tbody>
-      </table>
+          </ng-container>
+
+          <tr
+            mat-header-row
+            *matHeaderRowDef="displayedColumns; sticky: true"
+          ></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+        <mat-paginator
+          [pageSizeOptions]="[5, 10, 20]"
+          showFirstLastButtons
+          aria-label="Select page of periodic elements"
+        >
+        </mat-paginator>
+      </div>
     </div>
   </div>
 </div>
-

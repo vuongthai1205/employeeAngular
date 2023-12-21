@@ -17,16 +17,11 @@ export class RestApiService {
     }),
   };
 
-  getEmployees(page: any): Observable<Employee> {
-    if (page != null) {
+  getEmployees(): Observable<Employee> {
+    
       return this.http
-        .get<Employee>(`${this.apiURL}/api/Employee?page=${page}`)
-        .pipe(retry(1), catchError(this.handleError));
-    } else {
-      return this.http
-        .get<Employee>(`${this.apiURL}/api/Employee?page=1`)
-        .pipe(retry(1), catchError(this.handleError));
-    }
+        .get<Employee>(`${this.apiURL}/api/Employee`)
+        .pipe(retry(1), catchError(this.handleError))
   }
 
   // HttpClient API get() method => Fetch employee

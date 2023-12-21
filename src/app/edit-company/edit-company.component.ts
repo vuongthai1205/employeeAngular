@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RestApiService } from '../shared/rest-api.service';
 import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
@@ -10,6 +10,8 @@ import { CommonModule } from '@angular/common';
 import { PlacesService } from '../shared/places.service';
 import { AddEmployeeToCompanyComponent } from '../add-employee-to-company/add-employee-to-company.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-edit-company',
@@ -21,7 +23,10 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
     MatInputModule,
     CommonModule,
     AddEmployeeToCompanyComponent,
-    TranslateModule
+    TranslateModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatButtonModule,
   ],
   templateUrl: './edit-company.component.html',
   styleUrl: './edit-company.component.scss',

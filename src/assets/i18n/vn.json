@@ -6,6 +6,7 @@
   "list-employee": {
     "manager": "Quản lý nhân viên",
     "add": "Thêm",
+    "text": "Danh sách nhân viên",
     "Id": "Mã Nhân Viên",
     "firstName": "Tên",
     "lastName": "Họ",
@@ -68,5 +69,14 @@
   "edit-company": "Chỉnh sửa thông tin Công Ty",
   "add-employees-to-company": "Thêm Nhân Viên vào Công Ty",
   "employees": "Nhân viên",
-  "add-employees": "Thêm nhân viên"
+  "add-employees": "Thêm nhân viên",
+  "title-app": "Ứng dụng quản lý nhân viên",
+  "footer-app": "Chân trang",
+  "itemsPerPageLabel": "Phần tử trên trang:",
+  "lastPageLabel": "Trang cuối",
+  "nextPageLabel": "Trang tiếp theo",
+  "previousPageLabel": "Trang trước",
+  "caption-table-company" : "Bảng công ty",
+  "caption-table-employee" : "Bảng nhân viên"
+
 }

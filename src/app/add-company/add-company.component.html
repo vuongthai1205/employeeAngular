@@ -1,29 +1,41 @@
-<div class="container">
+<div class="container mb-5">
   <div class="row">
     <div class="col-12">
+      <p>
+        <b>{{ "add-company.text" | translate }}</b>
+      </p>
       <form [formGroup]="companyForm" (ngSubmit)="onSubmit()">
-        
         <div class="form-group">
-          <label for="Name">{{'list-company.name' | translate}}: </label>
-          <input
-            type="text"
-            class="form-control"
-            id="Name"
-            placeholder="{{'add-company.enter-name' | translate}}"
-            formControlName="name"
-          />
+          <mat-form-field appearance="outline" class="input-form-add-company">
+            <mat-label>{{ "list-company.name" | translate }}</mat-label>
+            <input
+              type="text"
+              formControlName="name"
+              matInput
+              placeholder="{{ 'add-company.enter-name' | translate }}"
+            />
+          </mat-form-field>
         </div>
         <div class="form-group">
-          <label for="address">{{'list-company.address' | translate}}:</label>
-          <input
-            type="tel"
-            class="form-control"
-            id="address"
-            placeholder="{{'add-company.enter-address' | translate}}"
-            formControlName="address"
-          />
+          <mat-form-field appearance="outline" class="input-form-add-company">
+            <mat-label>{{ "list-company.address" | translate }}</mat-label>
+            <input
+              type="text"
+              formControlName="address"
+              matInput
+              placeholder="{{ 'add-company.enter-address' | translate }}"
+            />
+          </mat-form-field>
         </div>
-        <button type="submit" class="btn btn-primary mt-2">{{'add-company.submit' | translate}}</button>
+        <button
+          mat-button
+          color="accent"
+          mat-raised-button
+          type="submit"
+          class="btn btn-primary mt-2"
+        >
+          {{ "add-company.submit" | translate }}
+        </button>
       </form>
     </div>
   </div>

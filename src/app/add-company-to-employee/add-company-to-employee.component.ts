@@ -10,6 +10,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { ToastrService } from 'ngx-toastr';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { MatDialogRef } from '@angular/material/dialog';
+import { EditCompanyComponent } from '../edit-company/edit-company.component';
 
 @Component({
   selector: 'app-add-company-to-employee',
@@ -36,6 +38,7 @@ export class AddCompanyToEmployeeComponent implements OnInit {
           console.log(res);
           this.route.navigate(["list-employee"])
           this.toast.success(`${this.translate.instant("add-company-to-employee.change")} ${this.companyId} ${this.translate.instant("to")} ${this.employeeId} ${this.translate.instant("success")}`, this.translate.instant("notification"))
+          this.dialogRef.close()
         },
         error: (err) => {
           console.log(err);
@@ -65,7 +68,7 @@ export class AddCompanyToEmployeeComponent implements OnInit {
     });
   }
 
-  constructor(private restApi: RestApiService, private route: Router, private toast: ToastrService, private translate: TranslateService) {
+  constructor(private restApi: RestApiService, private route: Router, private toast: ToastrService, private translate: TranslateService,public dialogRef: MatDialogRef<EditCompanyComponent>) {
     
   }
 }

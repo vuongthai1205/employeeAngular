@@ -1,1 +1,29 @@
-<p>header works!</p>
+<div class="header">
+  <mat-toolbar color="primary" class="mb-2">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+      (click)="drawer.toggle()"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>{{ "title-app" | translate }}</span>
+    <span class="example-spacer"></span>
+    <label for="selectLanguage">Select language</label>
+    <select
+    matTooltip="Select Language"
+      id="selectLanguage"
+      #langSelect
+      (change)="languageChange(langSelect)"
+    >
+      <option
+        *ngFor="let lang of translate.getLangs()"
+        [value]="lang"
+        [selected]="lang === translate.defaultLang"
+      >
+        {{ lang }}
+      </option>
+    </select>
+  </mat-toolbar>
+</div>

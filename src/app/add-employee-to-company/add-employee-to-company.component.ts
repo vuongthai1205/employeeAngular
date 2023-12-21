@@ -59,7 +59,7 @@ export class AddEmployeeToCompanyComponent implements OnInit {
   ) {}
 
   loadEmployee() {
-    return this.restApi.getEmployees(0).subscribe({
+    return this.restApi.getEmployees().subscribe({
       next: (res: any) => {
         // Lọc ra những employee có giá trị company bằng null
         this.employeeList = res.data.filter(

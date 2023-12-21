@@ -1,40 +1,43 @@
-<div class="container">
+<div class="container-xl edit-employee">
   <div class="row">
     <div class="col-12">
-      <b class="mb-2 font-weight-bold">{{'edit-employee.text' | translate}}</b>
+      <p><b>{{'edit-employee.text' | translate}}</b></p>
       <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
-          <label for="firstName">{{'list-employee.firstName' | translate}}:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="firstName"
-            placeholder="{{'add-employee.enter-firstName' | translate}}"
-            formControlName="firstName"
-          />
+          <mat-form-field appearance="outline" class="input-form-edit-employee">
+            <mat-label>{{ "list-employee.firstName" | translate }}</mat-label>
+            <input
+              type="text"
+              formControlName="firstName"
+              matInput
+              placeholder="{{ 'add-employee.enter-firstName' | translate }}"
+            />
+          </mat-form-field>
         </div>
         <div class="form-group">
-          <label for="firstName">{{'list-employee.lastName' | translate}}:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="lastName"
-            placeholder="{{'add-employee.enter-lastName' | translate}}"
-            formControlName="lastName"
-          />
+          <mat-form-field appearance="outline" class="input-form-edit-employee">
+            <mat-label>{{ "list-employee.lastName" | translate }}</mat-label>
+            <input
+              type="text"
+              formControlName="lastName"
+              matInput
+              [placeholder]="'add-employee.enter-lastName' | translate"
+            />
+          </mat-form-field>
         </div>
         <div class="form-group">
-          <label for="firstName">{{'list-employee.phone' | translate}}:</label>
-          <input
-            type="tel"
-            class="form-control"
-            id="phone"
-            placeholder="{{'add-employee.enter-phone' | translate}}"
-            formControlName="phone"
-          />
+          <mat-form-field appearance="outline" class="input-form-edit-employee">
+            <mat-label>{{ "list-employee.phone" | translate }}</mat-label>
+            <input
+              type="tel"
+              formControlName="phone"
+              matInput
+              placeholder="{{ 'add-employee.enter-phone' | translate }}"
+            />
+          </mat-form-field>
         </div>
         
-        <button type="submit" class="btn btn-primary mt-2">{{'add-employee.submit' | translate}}</button>
+        <button color="accent" mat-raised-button [mat-dialog-close]="true" type="submit" class="btn btn-primary mt-2">{{'add-employee.submit' | translate}}</button>
       </form>
       @defer (when isCheckCompany()) {
 

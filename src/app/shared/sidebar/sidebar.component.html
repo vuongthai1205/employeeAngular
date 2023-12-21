@@ -1,1 +1,21 @@
-<p>sidebar works!</p>
+<mat-list role="list">
+  <mat-list-item role="listitem"
+    ><a
+      class="nav-link"
+      [routerLink]="['list-employee']"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+      >{{ "HOME.LIST-EMPLOYEES" | translate }}</a
+    ></mat-list-item
+  >
+  <mat-divider></mat-divider>
+  <mat-list-item role="listitem">
+    <a
+      class="nav-link"
+      routerLink="/list-company"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+      >{{ "HOME.LIST-COMPANY" | translate }}</a
+    ></mat-list-item
+  >
+</mat-list>
